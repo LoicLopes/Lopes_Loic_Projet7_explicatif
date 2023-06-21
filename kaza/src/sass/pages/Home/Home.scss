@@ -1,0 +1,12 @@
+.testhome{ 
+    display: flex;
+    flex-direction: column;
+    padding : 10px;
+    border: 2px solid black;
+    background-color: purple;
+    div{
+        padding : 10px;
+        display: flex;
+        gap: 20px;
+    }
+}
