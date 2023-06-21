@@ -1,0 +1,46 @@
+// Css de la banniere
+.banner_home {
+  // Utilisation de la mixin flex-center pour centrer la bannier au centre de main en largeur
+  @include flex-center;
+  // Height de la maquette
+  height: 225px;
+  // Width pour prendre toute la largeur de la page
+  width: 100%;
+  // Arrondie les coins de px
+  border-radius: 25px;
+  // Overflow pour masquer le dépassément de l'image
+  overflow: hidden;
+  // position relative pour rester dans le flux normal
+  position: relative;
+  // Ajout d'une ombre
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+
+  @include media-query(Smartphone) {
+    height: 110px;
+    border-radius: 10px;
+  }
+  // Réglage de l'image
+  img {
+    //Position absolute pour sortir du flux normal
+    position: absolute;
+    //Défini comment l'img s'adapte a son conteneur donc couvre l'ensemble du conteneur
+    object-fit: cover;
+    // Filtre de luminosité
+    filter: brightness(75%);
+  }
+  // Réglage du titre
+  h2 {
+    // Redéfinition du l'epaisseur de l'ecrire car le reglage du h2 par defaut prend le dessus sur le reglage fait dans base.scss
+    font-weight: 500;
+    // Redéfinition de la taille de la police (maquette)
+    font-size: 48px;
+    // Texte blanc
+    color: $contrast-white;
+    // Position relative pour rester dans le flux normal
+    position: relative;
+    margin: 20px;
+    @include media-query(Smartphone) {
+      font-size: 24px;
+    }
+  }
+}

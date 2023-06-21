@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './components/routes/App';
 import './sass/Main.scss';
+
+import { BrowserRouter } from 'react-router-dom';
+
+import Header from './Layout/Header/Header';
+import Footer from './Layout/Footer/Footer';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1 style={{ 
-      fontSize : 20,
-      width : 500,
-      height : 80,
-      textAlign : 'center',
-      backgroundColor : "red" ,
-      border : "3px  solid blue"
-    }}>
-    test da page index
-    </h1>
-    <App />
+    <BrowserRouter>
+          <Header/>
+          <App/>
+          <Footer/>
+    </BrowserRouter>
   </React.StrictMode>
 );
