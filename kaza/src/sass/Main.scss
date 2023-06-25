@@ -1,8 +1,15 @@
-@import "./base/base.scss";
+@import './utils/colors/colors.scss';
+@import './utils/mixins/mixins.scss';
 
-@import "./pages/About/About.scss";
-@import "./pages/Apartment/Apartment.scss";
-@import "./pages/Error/Error.scss";
-@import "./pages/Home/Home.scss";
+@import './base/base.scss';
 
-@import "./Layout/Header/Header.scss"
+@import './components/Banner/Banner.scss';
+@import './components/Card/Card.scss';
+
+@import './pages/About/About.scss';
+@import './pages/Apartment/Apartment.scss';
+@import './pages/Error/Error.scss';
+@import './pages/Home/Home.scss';
+
+@import './Layout/Header/Header.scss';
+@import './Layout/Footer/Footer.scss';
