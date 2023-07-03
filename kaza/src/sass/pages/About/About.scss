@@ -1,0 +1,10 @@
+.about {
+  @include flex-center-column;
+  width: 100%;
+  padding: 30px 0px 200px 0px;
+  gap: 30px;
+
+  @include media-query(Smartphone) {
+    padding-top: 20px;
+  }
+}

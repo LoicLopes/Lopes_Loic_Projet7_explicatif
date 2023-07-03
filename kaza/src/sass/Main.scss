@@ -1,0 +1,19 @@
+@import './utils/colors/colors.scss';
+@import './utils/mixins/mixins.scss';
+
+@import './base/base.scss';
+
+@import './components/Banner/Banner.scss';
+@import './components/Card/Card.scss';
+@import './components/Banner/Banner_about.scss';
+@import './components/Collapse/Collapse.scss';
+@import './components/Carrousel/Carrousel.scss';
+@import './components/Tags/Tags.scss';
+
+@import './pages/About/About.scss';
+@import './pages/Apartment/Apartment.scss';
+@import './pages/Error/Error.scss';
+@import './pages/Home/Home.scss';
+
+@import './Layout/Header/Header.scss';
+@import './Layout/Footer/Footer.scss';

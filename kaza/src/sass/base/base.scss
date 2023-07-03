@@ -1,0 +1,42 @@
+// Ensemble du contenue de l'application
+* {
+  // Rénitialisation de tous le contenue pour eviter les défaults
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+}
+// Sur la balise Html et Body
+html,
+body {
+  // Hauteur et largeur a 100%
+  height: 100%;
+  width: 100%;
+  // Police general
+  font-family: Montserrat;
+  font-weight: 500;
+}
+// Sur la div qui a l'id Root qui vas generer notre application
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+// Sur la partie main (comporte about/home/error/Apartment)
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 50px;
+  margin: auto;
+  flex: auto;
+  max-width: 1300px;
+  width: 100%;
+  @include media-query(Smartphone) {
+    // Haut / droite / bas / gauche
+    padding: 0px 20px 10px 20px;
+  }
+}
+/*
+ul {
+  list-style: none;
+}*/

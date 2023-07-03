@@ -1,0 +1,19 @@
+footer {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+  height: 210px;
+  background-color: $contrast-black;
+  flex-shrink: 0;
+  gap: 30px;
+  .footer__logo {
+    margin: 20px;
+  }
+  .footer__text {
+    color: $contrast-white;
+    font-size: 24px;
+    @include media-query(Smartphone) {
+      font-size: 12px;
+    }
+  }
+}

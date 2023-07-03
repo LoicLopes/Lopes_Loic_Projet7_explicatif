@@ -1,0 +1,127 @@
+.Apartment {
+  display: flex;
+  flex-direction: column;                                               // valider
+  width: 100%;
+  color: $color-primary;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include media-query(Smartphone) {                              // valider
+        flex-direction: column;
+        }
+        &__title--wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;                                                      // valider
+        }
+        &__host--wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media-query(Smartphone) {
+            flex-direction: row-reverse;                                // valider
+            align-items: center;
+            margin: 15px 0px;
+        }
+        }
+        &__title {
+        font-weight: 500;
+        font-size: 36px;
+        @include media-query(Smartphone) {                          // valider
+            font-size: 18px;
+        }
+        }
+        &__location {
+        margin-top: 10px;
+        font-size: 18px;
+        @include media-query(Smartphone) {                              // vamider
+            font-size: 14px;
+        }
+        }
+        &__host {
+        @include flex-center;
+        flex-direction: row;
+        width: 180px;
+        @include media-query(Smartphone) {                               // valider       
+            width: 135px;
+        }
+        &__name {
+            margin-right: 10px;
+            font-size: 18px;
+            text-align: right;                                          
+            line-height: 25px;                                              // valider
+            @include media-query(Smartphone) {
+            font-size: 12px;
+            }
+        }
+        &__picture {
+            border-radius: 50%;
+            height: 64px;
+            width: 64px;                                                    // valider
+            @include media-query(Smartphone) {       
+            height: 32px;
+            width: 32px;
+            }
+        }
+        }
+        &__evaluation {
+        display: flex;
+        margin: 0;
+        padding: 0;                                                         
+        gap: 5px;
+        & img{                                                          // valider
+            width: 24px;
+            height: 24px;
+         }
+        @include media-query(Smartphone){
+            img{
+            width: 13px;
+            height: 13px;
+            }
+            
+        }
+        }
+    }
+
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 20px 0px 30px 0px;
+    height: 100%;
+    @include media-query(Smartphone) {                                      // valider
+      flex-direction: column;   
+      gap: 15px;
+      margin: 0px 0px 30px 0px;
+    }
+    & .Collapse {
+      max-width: 580px;
+      @include media-query(Smartphone) {                                   // valider                                 
+        max-width: 100%;
+      }
+      &__header {
+        border-radius: 10px;
+        font-size: 18px;
+        @include media-query(Smartphone) {                                  
+          height: 30px;                                                     // valider
+          font-size: 13px;
+          padding: 0px 10px 0px 10px;
+        }
+      }
+      .content {
+        font-size: 18px;
+        @include media-query(Smartphone) {
+          font-size: 12px;                                                  // valider
+          padding: 20px 10px 10px 10px;
+        }
+      }
+    }
+  }
+}
