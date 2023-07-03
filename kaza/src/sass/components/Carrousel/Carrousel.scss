@@ -1,0 +1,76 @@
+.carousel {
+  width: 100%;
+  max-width: 1240px;
+  height: 420px;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  @include media-query(Smartphone) {
+    height: 260px;
+    border-radius: 10px;
+  }
+}
+
+.slide {
+  width: inherit; // element parent
+  height: inherit; // element parent
+  position: absolute;
+  opacity: 1; // opacité 1 =
+  transition: opacity 0.4s ease-in;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--hidden {
+    opacity: 0.5; // opacity 0.5 evite la transition brusque
+  }
+}
+
+.button {
+  position: absolute;
+  top: 50%; /* centre le bouton verticalement sur l'image */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include media-query(Smartphone) {
+    padding: 7px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    @include media-query(Smartphone) {
+      height: 20px;
+    }
+  }
+
+  &.btn_previous {
+    left: 0;
+    padding-left: 20px;
+    @include media-query(Smartphone) {
+      padding-left: 10px;
+    }
+  }
+
+  &.btn_next {
+    right: 0;
+    padding-right: 20px;
+    @include media-query(Smartphone) {
+      padding-right: 10px;
+    }
+  }
+}
+
+.counter {
+  position: absolute;
+  color: $contrast-white;
+  font-size: 18px;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 15px;
+  @include media-query(Smartphone) {
+    display: none;
+  }
+}

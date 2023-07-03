@@ -1,0 +1,18 @@
+.tag{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+   &__content{
+    background-color: $color-primary;
+    color: $contrast-white;
+    font-size: 14px;
+    border-radius:10px ;
+    padding: 0px 30px 0px 30px;
+    @include media-query(Smartphone){
+        font-size: 10px;
+        border-radius: 5px;
+        white-space: nowrap;            //pas de retour a la ligne du texte
+        word-wrap: normal;
+    }
+   }
+}
