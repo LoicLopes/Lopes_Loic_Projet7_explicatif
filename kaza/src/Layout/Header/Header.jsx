@@ -1,22 +1,19 @@
-// Importation de Link de react-router qui vas permettre de naviguer en attribuant le chemin des routes
-import { Link } from 'react-router-dom'
-// Importation du logo du dossier assets
+import { NavLink } from 'react-router-dom'
 import logo from '../../assets/logos/logo.png'
 
-// Création de la fonction Header
 function Header() {
   return (
     <header className="header">
-      <Link to="/">
+      <NavLink to="/">
         <img className="header__logo" src={logo} alt="Kasa"></img>
-      </Link>
+      </NavLink>
       <nav className="nav">
-        <Link to="/" className="nav__link">
+        <NavLink to="/" className="nav__link">
           Accueil
-        </Link>
-        <Link to="/About" className="nav__link">
+        </NavLink>
+        <NavLink to="/About" className="nav__link">
           A propos
-        </Link>
+        </NavLink>
       </nav>
     </header>
   )
